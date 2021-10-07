@@ -15,10 +15,18 @@ use App\Http\Controllers\ProductsController;
 */
 
 
-// Route::get('/products', [ProductsController::class, 'index']);
- Route::get('/products/about', [ProductsController::class, 'about']);
+// // Route::get('/products', [ProductsController::class, 'index']);
+// Route::get('/products/about', [ProductsController::class, 'about']);
 
-Route::get('/products', 'App\Http\Controllers\ProductsController@index');
+// // Pattern is integer
+// Route::get('/products/{name}/{id}', 
+//     [ProductsController::class, 'show']) -> where([
+//         'name' => '[a-zA-Z]+',
+//         'id' => '[0-9]+'
+//     ]);
+
+Route::get('/products',
+[ProductsController::class, 'index'])->name('products');
 
 //Before Laravel 8
 //Route::get('/products', 'ProductsController@index');

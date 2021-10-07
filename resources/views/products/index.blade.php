@@ -6,13 +6,13 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<h1> !!!!! </h1> 
+<h1> Products </h1> 
 
-@foreach($data as $item)
-<p>
-  {{ $item }}
-</p>
+{{-- @foreach($data as $item) --}}
+{{-- <p>
+  {{ $products }}
+</p> --}}
 
-@endforeach
+{{-- @endforeach --}}
 </body>
 </html>
