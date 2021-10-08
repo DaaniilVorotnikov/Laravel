@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,13 @@ use App\Http\Controllers\ProductsController;
 */
 
 
+Route::get('/', [PagesController::class, 'index']);
+Route::get('/about', [PagesController::class, 'about']);
+
+//Posts endpoint
+
+Route::get('/posts', [PostController::class, 'index']);
+
 // // Route::get('/products', [ProductsController::class, 'index']);
 // Route::get('/products/about', [ProductsController::class, 'about']);
 
@@ -25,8 +33,8 @@ use App\Http\Controllers\ProductsController;
 //         'id' => '[0-9]+'
 //     ]);
 
-Route::get('/products',
-[ProductsController::class, 'index'])->name('products');
+// Route::get('/products',
+// [ProductsController::class, 'index'])->name('products');
 
 //Before Laravel 8
 //Route::get('/products', 'ProductsController@index');
